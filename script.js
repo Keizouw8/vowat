@@ -48,7 +48,7 @@ var pagetransitions = [
             tape[center - i - 1] = 1 - tape[center - i - 1];
             setTimeout(function(){
                 document.querySelectorAll("fullpage[page='2'] > tape > block > h1")[center - i - 1].innerText = tape[center - i - 1];
-                new Audio("/sounds/punch.m4a").play();
+                new Audio("sounds/punch.m4a").play();
             }, 1000);
         }, 2000));
         setTimeout(function(){
@@ -77,7 +77,7 @@ var pagetransitions = [
                         span.style.fontWeight = "900";
                         document.querySelector("fullpage[page='3'] > #landing > #timecard").appendChild(document.createElement("br"));
                         document.querySelector("fullpage[page='3'] > #landing > #timecard").appendChild(span);
-                        new Audio("/sounds/bass.wav").play();
+                        new Audio("sounds/bass.wav").play();
                     }, 1500)
                 }
             }, 1500 + intervals[0].slice(0, i).reduce((a, i) => a + i, 0)))(i);
