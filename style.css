@@ -1,0 +1,154 @@
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+fullpage {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+section {
+    scroll-snap-align: start;
+}
+body{
+    background: rgb(20, 20, 20);
+    color: white;
+}
+.nospace, body, html, fullpage {
+    scrollbar-width: none;
+    padding: 0;
+    margin: 0;
+    -ms-overflow-style: none;
+}
+
+fullpage {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+
+section {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.centeredcontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+*{
+    margin: 0.5vh;
+    padding: 0.5vh;
+    font-family: 'Lexend', sans-serif;
+    font-weight: normal;
+    transition: 1s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+button {
+    color: black;
+    transition: 0.5s;
+    outline: none;
+    border: solid black 0px;
+    border-radius: 1vh;
+    padding: 1vh;
+    background: white;
+}
+button:hover{
+    background: rgb(20, 20, 20);
+    color: white;
+}
+[active="1"]{
+    opacity: 1;
+    pointer-events: all;
+}
+[active="0"]{
+    opacity: 0;
+    pointer-events: none
+}
+tape{
+    position: absolute;
+    bottom: 10vh;
+    height: calc(48px + 10vh);
+    background: rgb(220, 220, 220);
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: scroll;
+}
+tape[active="1"]{
+    transform: translateX(-50%);
+}
+tape[active="0"]{
+    opacity: 1;
+    transform: translateX(calc(100vw / 2));
+}
+block{
+    flex-shrink: 0;
+    background: white;
+    display: block;
+    padding: 0;
+    margin: 1vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    height: calc(48px + 6vh);
+    width: calc(48px + 6vh);
+    position: relative;
+}
+block > h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    color: black;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+img#pagetransition[active="0"] {
+    height: 30vh;
+    left: 100vw;
+    top: -30vh;
+    opacity: 1;
+    transform: rotateZ(0deg);
+}
+
+img#pagetransition[active="1"], img#bletchley[active="0"] {
+    height: 30vh;
+    left: calc(100vw - 17vh);
+    top: -15vh;
+    opacity: 1;
+    transform: rotateZ(5deg);
+}
+
+img#pagetransition[active="2"], img#bletchley[active="1"] {
+    height: 60vh;
+    left: 50%;
+    top: 7vh;
+    opacity: 1;
+    transform: rotateZ(0deg) translateX(-50%);
+
+}
+
+img#pagetransition:hover {
+    left: calc(100vw - 20vh);
+    top: -12vh;
+    opacity: 1;
+    transform: rotateZ(2deg);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voices of the War - Alan Turing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;900&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <fullpage page="0" active="1">
+        <div class="centered nospace centeredcontent" style="height: 50vh; width: 50vw; outline: solid 3px white; animation: fadeInAnimation ease 5s;">
+            <h1>alan turing</h1>
+            <h2>voices from the war</h2>
+            <br>
+            <button id="pagetransition">start</button>
+        </div>
+    </fullpage>
+    <fullpage page="1" active="0">
+        <h1 active="1" class="centered" style="font-family: 'Source Code Pro', monospace; font-size: 10vh; text-align: center;" id="timecard"></h1>
+        <div active="0" id="content">
+            <div style="position: absolute; top: 5vh; left: 5vh; height: 88vh; width: calc(50vw - 7.5vh); background-position: center;">
+                <h1 style="font-weight: 900; font-size: 64px;">Alan Turing's Upbringing</h1>
+                <ul style="margin-left: 2vh; font-size: 32px;">
+                    <li>His parents left Alan to family friends at 1 years old</li>
+                    <li>Grew up in the Baston Lodge in East Sussex</li>
+                    <li>Studied at Cambridge and Princeton from 1931 to 1938</li>
+                    <li>In 1936, while studying at Cambridge, Turing published landmark paper about probability. In it, he defines the <button id="pagetransition" style="font-size: 32px;">Turing Machine</button></li>
+                </ul>
+            </div>
+            <div style="position: absolute; top: 5vh; right: 5vh; height: 88vh; width: calc(50vw - 7.5vh); background-position: center; background-size: cover; background-image: url('/images/baston.jpeg');"></div>
+        </div>
+        <tape active="0"></tape>
+    </fullpage>
+    <fullpage page="2" active="0">
+        <center style="position: absolute; width: 80vw; height: 60vh; left: 10vw; top: 10vh">
+            <h1 style="font-weight: 900; font-size: 64px;">The Turing Machine</h1>
+            <p style="font-size: 32px;">
+                A machine that could solve any math equation given an infinitely long tape with boxes in it that either said 1 and 0 by overwriting values on different positions on the tape given the current value the reader was over <br>
+                It was the first description of a machine that could be programmed. Modern computers today are all Turing machines that toggle on and off 1's and 0's in a sequence. For this, Turing is known as the father of the modern computer
+        </center>
+        <tape active="0"></tape>
+        <div style="position: absolute; bottom: 11vh; height: calc(48px + 8vh); width: calc(48px + 8vh); left: 50%; margin: 0; padding: 0; outline: rgb(100, 100, 100) solid 2vh; transform: translateX(-50%)">
+            <div style="position: absolute; left: 50%; top: 0%; transform: translateX(-50%); border: solid 3vh; border-color: rgb(100, 100, 100) transparent transparent transparent; padding: 0; margin: 0"></div>
+        </div>
+        <img active="0" id="pagetransition" src="https://www.gchq.gov.uk/images/bletchley_WWII.jpg" style="position: absolute; cursor: pointer;">
+    </fullpage>
+    <fullpage page="3" active="0">
+        <div id="landing" active="1">
+            <img active="0" id="bletchley" src="https://www.gchq.gov.uk/images/bletchley_WWII.jpg" style="position: absolute;">
+            <h1 style="width: 80vw;font-size: 8vh; font-family: 'Source Code Pro', monospace; position: absolute; left: 50%; transform: translateX(-50%); top: 70vh; text-align: center;" id="timecard"></h1>
+        </div>
+        <div id="content" active="0"><h1>still in dev</h1></div>
+    </fullpage>
+</body>
+</html>
