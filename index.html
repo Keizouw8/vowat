@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;900&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <script src="scripts/morsecode.js"></script>
+    <script src="scripts/morse.js"></script>
+    <script src="scripts/engima.js"></script>
+    <script src="scripts/script.js" defer></script>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
     <fullpage page="0" active="1">
@@ -54,7 +57,21 @@
             <img active="0" id="bletchley" src="https://www.gchq.gov.uk/images/bletchley_WWII.jpg" style="position: absolute;">
             <h1 style="width: 80vw;font-size: 8vh; font-family: 'Source Code Pro', monospace; position: absolute; left: 50%; transform: translateX(-50%); top: 70vh; text-align: center;" id="timecard"></h1>
         </div>
-        <div id="content" active="0"><h1>still in dev</h1></div>
+        <div id="content" active="0">
+            <div style="position: absolute; left: 50%; top: calc(50% - 3vh); transform: translate(-50%, -50%); padding: 0; margin: 0">
+                <center style="position: relative; width: 85vw; left: 7.5vw; display: block" class="nospace">
+                    <h1 style="font-weight: 900; font-size: 64px;">Code Breaking</h1>
+                    <p style="font-size: 32px;">
+                        During World War II, Alan Turing was tasked by the British to crack Germany's Enigma Code. In Naval warfare, the Germans were sending encrypted messages that contained sensitive combat information using the Enigma Machine. The Enigma Code was a nearly unbreakable cipher that outputted a different character given the same input with 3 knobs that can alter the nature of the encryption.<br>
+                        His work shortened the war by years and it's estimated he saved 15+ million lives.
+                </center>
+                <div style="top: 4vh; height: calc(144px + 6vh); width: 100vw; position: relative; margin: 0; padding: 0; left: 0; background: white; color: black; display: block;">
+                    <h1 id="morsetape" active="0"></h1>
+                    <h1 id="enigmatape" style="position: absolute; padding: 0; margin: 0; top: calc(50%); transform: translateY(-50%); right: 0%; font-size: 48px; text-align: right; overflow-x: hidden; white-space: nowrap; font-family: 'Source Code Pro';"></h1>
+                    <h1 id="decodedtape" style="position: absolute; padding: 0; margin: 0; bottom: calc(2vh); right: 0%; font-size: 48px; text-align: right; overflow-x: hidden; white-space: nowrap; font-family: 'Source Code Pro';"></h1>
+                </div>
+            </div>
+        </div>
     </fullpage>
 </body>
 </html>
