@@ -18,13 +18,13 @@ var pagetransitions = [
             document.querySelector("fullpage[page='1'] > #timecard").setAttribute("active", 0);
             return document.querySelector("fullpage[page='1'] > #content").setAttribute("active", 1);
         }
-        new Audio("/vowat/sounds/harp.wav").play();
+        new Audio("sounds/harp.wav").play();
         var text = [..."London\nJune 17, 1912"]
         var intervals = text.map(() => 50 + Math.random() * 400);
         for(var i=0;i<text.length;i++){
             ((ci) => setTimeout(function(){
                 document.querySelector("fullpage[page='1'] > #timecard").textContent += text[ci];
-                text[ci].trim().length ? new Audio(`/vowat/sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`/vowat/sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
+                text[ci].trim().length ? new Audio(`sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
                 if(ci == text.length-1){
                     setTimeout(() => {
                         document.querySelector("fullpage[page='1'] > #timecard").setAttribute("active", 0);
@@ -48,7 +48,7 @@ var pagetransitions = [
             tape[center - i - 1] = 1 - tape[center - i - 1];
             setTimeout(function(){
                 document.querySelectorAll("fullpage[page='2'] > tape > block > h1")[center - i - 1].innerText = tape[center - i - 1];
-                new Audio("/vowat/sounds/punch.m4a").play();
+                new Audio("sounds/punch.m4a").play();
             }, 1000);
         }, 2000));
         setTimeout(function(){
@@ -69,7 +69,7 @@ var pagetransitions = [
         for(var i=0;i<text[0].length;i++){
             ((ci) => setTimeout(function(){
                 document.querySelector("fullpage[page='3'] > #landing >#timecard").textContent += text[0][ci];
-                text[0][ci].trim().length ? new Audio(`/vowat/sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`/vowat/sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
+                text[0][ci].trim().length ? new Audio(`sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
                 if(ci == text[0].length-1){
                     setTimeout(() => {
                         var span = document.createElement("span");
@@ -77,7 +77,7 @@ var pagetransitions = [
                         span.style.fontWeight = "900";
                         document.querySelector("fullpage[page='3'] > #landing > #timecard").appendChild(document.createElement("br"));
                         document.querySelector("fullpage[page='3'] > #landing > #timecard").appendChild(span);
-                        new Audio("/vowat/sounds/bass.wav").play();
+                        new Audio("sounds/bass.wav").play();
                     }, 1500)
                 }
             }, 1500 + intervals[0].slice(0, i).reduce((a, i) => a + i, 0)))(i);
@@ -85,7 +85,7 @@ var pagetransitions = [
         for(var i=0;i<text[1].length;i++){
             ((ci) => setTimeout(function(){
                 document.querySelector("fullpage[page='3'] > #landing > #timecard > span").textContent += text[1][ci];
-                text[0][ci].trim().length ? new Audio(`/vowat/sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`/vowat/sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
+                text[0][ci].trim().length ? new Audio(`sounds/kb/${Math.round(Math.random()*8)}.mov`).play() : new Audio(`sounds/kb/${[9, Math.round(Math.random()*8)][Math.round(Math.random())]}.mov`).play();
                 if(ci == text[1].length-1){
                     setTimeout(() => {
                         document.querySelector("fullpage[page='3'] > #landing").setAttribute("active", 0);
