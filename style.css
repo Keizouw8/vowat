@@ -27,6 +27,8 @@ fullpage {
     position: absolute;
     height: 100vh;
     width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 section {
@@ -174,5 +176,20 @@ h1#morsetape[active="0"]{
 
 h1#morsetape[active="1"]{
     transform: translateX(-100%);
+    opacity: 1;
+}
+
+div#pagetransition > p {
+    opacity: 0;
+    font-size: 96px;
+    color: black;
+    height: 100%;
+    width: 100%;
+    font-weight: 900;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+div#pagetransition > p:hover {
     opacity: 1;
 }

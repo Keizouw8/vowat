@@ -119,7 +119,9 @@ var pagetransitions = [
                 }
             }, intervals[1].slice(0, i).reduce((a, i) => a + i, 0) + 3250 + intervals[0].reduce((a, i) => a + i, 0)))(i);
         }
-    }
+    },
+    function(fos){ morse.stop() },
+    function(fos){}
 ]
 
 document.querySelectorAll("#pagetransition").forEach((e) => e.addEventListener("click", function(){
