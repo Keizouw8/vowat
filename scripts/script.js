@@ -1,4 +1,4 @@
-var fast = []
+var fast = [0, 1, 2, 3, 4]
 var page = 0;
 var tape = new Array(3*parseInt(window.innerWidth / (window.innerHeight * 0.1 + 48))).fill(0).map(() => Math.round(Math.random()));
 if(!(tape.length % 2)) tape.push(Math.round(Math.random()));
@@ -120,8 +120,13 @@ var pagetransitions = [
             }, intervals[1].slice(0, i).reduce((a, i) => a + i, 0) + 3250 + intervals[0].reduce((a, i) => a + i, 0)))(i);
         }
     },
-    function(fos){ morse.stop() },
-    function(fos){}
+    function(){ morse.stop() },
+    function(){
+        document.querySelector("fullpage[page='5'] > h1").setAttribute("active", 1);
+        document.querySelectorAll("fullpage[page='5'] > h1").forEach((e) => e.addEventListener("click", () => {
+            document.querySelectorAll("fullpage[page='5'] > h1").forEach((e) => e.setAttribute("active", 1 - parseInt(e.getAttribute("active", 1))));
+        }));
+    }
 ]
 
 document.querySelectorAll("#pagetransition").forEach((e) => e.addEventListener("click", function(){
