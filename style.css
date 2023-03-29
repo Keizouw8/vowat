@@ -193,3 +193,7 @@ div#pagetransition > p {
 div#pagetransition > p:hover {
     opacity: 1;
 }
+
+a:link, a:visited {
+    color: white;
+}

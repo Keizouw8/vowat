@@ -122,9 +122,14 @@ var pagetransitions = [
     },
     function(){ morse.stop() },
     function(){
+        var active = 0;
         document.querySelector("fullpage[page='5'] > h1").setAttribute("active", 1);
         document.querySelectorAll("fullpage[page='5'] > h1").forEach((e) => e.addEventListener("click", () => {
-            document.querySelectorAll("fullpage[page='5'] > h1").forEach((e) => e.setAttribute("active", 1 - parseInt(e.getAttribute("active", 1))));
+            active = (active + 1) % 3;
+            document.querySelectorAll("fullpage[page='5'] > h1").forEach((e, i) => {
+                console.log(i, active, +(i==active))
+                e.setAttribute("active", +(i == active))
+            });
         }));
     }
 ]
