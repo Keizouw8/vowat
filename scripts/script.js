@@ -1,4 +1,4 @@
-var fast = [0, 1, 2, 3, 4]
+var fast = []
 var page = 0;
 var tape = new Array(3*parseInt(window.innerWidth / (window.innerHeight * 0.1 + 48))).fill(0).map(() => Math.round(Math.random()));
 if(!(tape.length % 2)) tape.push(Math.round(Math.random()));
