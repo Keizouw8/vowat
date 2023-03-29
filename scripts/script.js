@@ -50,7 +50,7 @@ var pagetransitions = [
             tape[center - i - 1] = 1 - tape[center - i - 1];
             setTimeout(function(){
                 document.querySelectorAll("fullpage[page='2'] > tape > block > h1")[center - i - 1].innerText = tape[center - i - 1];
-                new Audio("sounds/punch.m4a").play();
+                new Audio("sounds/punch.mov").play();
             }, 1000);
         }, 2000));
         setTimeout(function(){
